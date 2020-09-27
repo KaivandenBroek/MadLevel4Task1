@@ -7,15 +7,15 @@ import androidx.room.PrimaryKey
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
-@Entity(tableName = "itemTable")
-data class Item(
+@Entity(tableName = "product_table")
+data class Product(
 
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "id")
     var id: Long? = null,
 
     @ColumnInfo(name = "name")
-    var itemName: String,
+    var productName: String,
 
     @ColumnInfo(name = "Quantity")
     var quantity: Int
