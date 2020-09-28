@@ -14,7 +14,6 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_shopping_list.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -47,15 +46,16 @@ class ShoppingListFragment : Fragment() {
         productRepository = ProductRepository(requireContext())
         getShoppingListFromDatabase()
 
-        initRv()
-
-        fabAdd.setOnClickListener {
-            showAddProductdialog();
+        fb_add_product.setOnClickListener {
+            showAddProductdialog()
         }
 
-        fabDelete.setOnClickListener {
+        fb_remove_all.setOnClickListener {
             removeAllProducts()
         }
+
+        initRv()
+
 
     }
 
@@ -128,8 +128,8 @@ class ShoppingListFragment : Fragment() {
         }
     }
 
-    private fun validateFields(txtProductName: EditText
-                               , txtAmount: EditText
+    private fun validateFields(
+        txtProductName: EditText, txtAmount: EditText
     ): Boolean {
         return if (txtProductName.text.toString().isNotBlank()
             && txtAmount.text.toString().isNotBlank()
@@ -140,8 +140,6 @@ class ShoppingListFragment : Fragment() {
             false
         }
     }
-
-
 
 
     /**

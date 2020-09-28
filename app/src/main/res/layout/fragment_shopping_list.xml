@@ -30,6 +30,8 @@
         android:clickable="true"
         android:focusable="true"
 
+        android:src="@android:drawable/ic_input_add"
+        android:tint="#FFFFFF"
         app:backgroundTint="#4CAF50"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/fb_remove_all"
@@ -46,6 +48,8 @@
         android:layout_marginBottom="16dp"
         android:clickable="true"
         android:focusable="true"
+        android:src="@android:drawable/ic_menu_delete"
+        android:tint="#FFFFFF"
         app:backgroundTint="#FF5722"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
